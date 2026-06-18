@@ -101,9 +101,9 @@ while True:
     print('')
     user_choice = int(input('Please Enter One of the Choice (1-3): '))
     while user_choice != 1 and user_choice != 2 and user_choice != 3:
-        print('Invalid option..')
-        print('1. Prefix Class')
-        print('2. Manual Class')
+        print('Invalid option...')
+        print('1. Claseful Subnet Info')
+        print('2. Manual CIDR Calculator')
         print('3. Exit')
         print('')
         user_choice = int(input('Please Enter One of the Choice (1-3): '))
