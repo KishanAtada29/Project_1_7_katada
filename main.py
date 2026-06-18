@@ -46,6 +46,7 @@ def prefix():
     }
 
     for subnetmask, value in subnetmasks.items():
+        print('')
         print(subnetmask)
         for label, information in value.items():
             print(f'{label} : {information}')
@@ -53,9 +54,10 @@ def prefix():
         print('------------------------') 
 
 def manual():
+    print('')
     cidr = int(input('Please enter CIDR (0-32): '))
     while cidr > 32 or cidr < 0:
-        print('Error')
+        print('Error...')
         cidr = int(input('Please enter CIDR (0-32): '))
     octect = 0
     subnetmask = []
@@ -71,14 +73,12 @@ def manual():
             octect = prefix_bits()[bit] + octect
         subnetmask.append(octect)
         if len(subnetmask) == 4:
-            print(subnetmask)
+            pass
         elif len(subnetmask) >= 3:
             subnetmask.append(0)
-            print(subnetmask)
         elif len(subnetmask) >= 2:
             subnetmask.append(0)
             subnetmask.append(0)
-            print(subnetmask)
     print(f'CIDR: /{cidr}')
     print(f'Nuber of useable host: {usable_ip(cidr)}')
     print(f'Subnetmask: {subnetmask}')
@@ -90,21 +90,37 @@ def manual():
 
 
 
+while True:
+    print('')
+    print('Subnetmask Planner')
+    print('-------------------')
+    print('')
+    print('1. Claseful Subnet Info')
+    print('2. Manual CIDR Calculator')
+    print('3. Exit')
+    print('')
+    user_choice = int(input('Please Enter One of the Choice (1-3): '))
+    while user_choice != 1 and user_choice != 2 and user_choice != 3:
+        print('Invalid option..')
+        print('1. Prefix Class')
+        print('2. Manual Class')
+        print('3. Exit')
+        print('')
+        user_choice = int(input('Please Enter One of the Choice (1-3): '))
+
+    
+    
 
 
-
-user_choice = input('Please Enter One of the Choice below\nPrefix\tManual\n')
-user_choice = user_choice.casefold()
-while user_choice != 'prefix' and user_choice != 'manual':
-    print('Invalid..')
-    user_choice = input('Please Enter One of the Choice below\nPrefix\tManual\n')
-    user_choice = user_choice.casefold()
-
-
-if user_choice == 'prefix':
-    prefix()
-elif user_choice == 'manual':
-    manual()
-      
+    if user_choice == 1:
+        prefix()
+    elif user_choice == 2:
+        manual()
+        
+    elif user_choice == 3:
+        print('Goodbye !')
+        break
+    print('')
+    input('Press Enter to continue...')
 
 
