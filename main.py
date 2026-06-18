@@ -1,7 +1,5 @@
 def class_A():
     return 24
-    """_summary_
-    """
 def class_B():
     return 16
 def class_C():
@@ -63,7 +61,6 @@ def manual():
     subnetmask = []
     if cidr == 0:
         subnetmask = [0,0,0,0]
-        print(subnetmask)
     else:
         octet_side = cidr % single_octet_bits()
         each_octet = int(cidr / 8)
@@ -81,7 +78,7 @@ def manual():
             subnetmask.append(0)
     print(f'CIDR: /{cidr}')
     print(f'Nuber of useable host: {usable_ip(cidr)}')
-    print(f'Subnetmask: {subnetmask}')
+    print(f'Subnetmask: {".".join(map(str,(subnetmask)))}')
 
         
 
