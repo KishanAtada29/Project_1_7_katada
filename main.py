@@ -69,13 +69,19 @@ def manual():
         for bit in range(octet_side):
             octect = prefix_bits()[bit] + octect
         subnetmask.append(octect)
-        if len(subnetmask) == 4:
-            pass
-        elif len(subnetmask) >= 3:
+        if len(subnetmask) == 3:
             subnetmask.append(0)
-        elif len(subnetmask) >= 2:
+        elif len(subnetmask) == 2:
             subnetmask.append(0)
             subnetmask.append(0)
+        elif len(subnetmask) == 1:
+            subnetmask.append(0)
+            subnetmask.append(0)
+            subnetmask.append(0)
+        elif len(subnetmask) == 5:
+            subnetmask.pop()
+
+
     print(f'CIDR: /{cidr}')
     print(f'Nuber of useable host: {usable_ip(cidr)}')
     print(f'Subnetmask: {".".join(map(str,(subnetmask)))}')
