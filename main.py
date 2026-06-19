@@ -61,6 +61,10 @@ def manual():
     subnetmask = []
     if cidr == 0:
         subnetmask = [0,0,0,0]
+        print('')
+        print(f'Address: {".".join(map(str,(subnetmask)))} /{cidr}')
+        print(f'Total IPv4 Address: {usable_ip(cidr) + unusable_IPs()} ')
+        print('Description: /0 represents all IPv4 address and is commonly used as a default route')
     else:
         octet_side = cidr % single_octet_bits()
         each_octet = int(cidr / 8)
@@ -82,9 +86,9 @@ def manual():
             subnetmask.pop()
 
 
-    print(f'CIDR: /{cidr}')
-    print(f'Nuber of useable host: {usable_ip(cidr)}')
-    print(f'Subnetmask: {".".join(map(str,(subnetmask)))}')
+        print(f'CIDR: /{cidr}')
+        print(f'Nuber of useable host: {usable_ip(cidr)}')
+        print(f'Subnetmask: {".".join(map(str,(subnetmask)))}')
 
         
 
