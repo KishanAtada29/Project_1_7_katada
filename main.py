@@ -24,7 +24,7 @@ def usable_ip(num):
     num = (unusable_IPs() ** num) - unusable_IPs()
     return num
 def classful_subnet():
-    subnetmasks = {
+    classful_subnet = {
        'class A':{
            'CIDR': '/8',
            'Number of usable IPs': (2**class_A()) - unusable_IPs(),
@@ -43,7 +43,7 @@ def classful_subnet():
 
     }
 
-    for subnetmask, value in subnetmasks.items():
+    for subnetmask, value in classful_subnet.items():
         print('')
         print(subnetmask)
         for label, information in value.items():
