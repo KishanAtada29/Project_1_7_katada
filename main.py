@@ -23,7 +23,7 @@ def usable_ip(num):
     num = total_bits() - num
     num = (unusable_IPs() ** num) - unusable_IPs()
     return num
-def prefix():
+def classful_subnet():
     subnetmasks = {
        'class A':{
            'CIDR': '/8',
@@ -120,7 +120,7 @@ while True:
 
 
     if user_choice == 1:
-        prefix()
+        classful_subnet()
     elif user_choice == 2:
         manual()
         
