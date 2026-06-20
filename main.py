@@ -2,7 +2,7 @@
 import functions as f
 import classful_subnet_info as csi
 
-def manual():
+def cidr_calculator():
     print('')
     cidr = int(input('Please enter CIDR (0-32): '))
     while cidr > 32 or cidr < 0:
@@ -73,7 +73,7 @@ while True:
     if user_choice == 1:
         csi.classful_subnet()
     elif user_choice == 2:
-        manual()
+        cidr_calculator()
         
     elif user_choice == 3:
         print('Goodbye !')
