@@ -1,8 +1,8 @@
 def cidr_desc(cidr):
     if cidr == 0:
-        des = '/0 — Represents all IPv4 addresses; commonly used as a default route.'
+        des = 'Represents all IPv4 addresses; commonly used as a default route.'
     elif 1 <= cidr <= 7:
-        des = '/1–/7 — Extremely large address ranges, rarely used as normal LAN subnets.'
+        des = 'Extremely large address ranges, rarely used as normal LAN subnets.'
     elif 8 <= cidr <= 15:
         des = 'Very large networks.'
     elif 16 <= cidr <= 23:

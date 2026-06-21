@@ -1,5 +1,5 @@
 import functions as f
-import subnetmask_calculator as sc
+import cidr_desc as cd
 
 def cidr_calculator():
     print('')
@@ -7,13 +7,10 @@ def cidr_calculator():
     while cidr > 32 or cidr < 0:
         print('Error...')
         cidr = int(input('Please enter CIDR (0-32): '))
-    if cidr == 0:
-        print('')
-        f.result(cidr)
-        print('Description: /0 represents all IPv4 address and is commonly used as a default route')
-    #elif cidr == 31
-    else:
-        print('')
-        f.result(cidr)
+
+
+    print('')
+    f.result(cidr, cd.cidr_desc(cidr))
+   
    
 
