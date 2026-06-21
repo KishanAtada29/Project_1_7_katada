@@ -1,3 +1,4 @@
+import subnetmask_calculator as sc
 
 def prefix_bits():
     numbers = [128, 64, 32, 16, 8, 4, 2, 1]
@@ -18,3 +19,11 @@ def usable_ip(num):
     num = total_bits() - num
     num = (unusable_IPs() ** num) - unusable_IPs()
     return num
+
+
+def result(cidr,desc):
+    print(f'CIDR: /{cidr}')
+    print(f'Nuber of useable host: {usable_ip(cidr)}')
+    print(f'Subnetmask: {".".join(map(str,(sc.subnetmask_calculator(cidr))))}')
+    print('Description: ' + desc)
+
