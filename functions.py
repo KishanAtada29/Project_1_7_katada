@@ -29,7 +29,7 @@ def result(cidr,desc):
     else: 
         ip = usable_ip(cidr)
     print(f'CIDR: /{cidr}')
-    print(f'Nuber of useable host: {ip}')
-    print(f'Subnetmask: {".".join(map(str,(sc.subnetmask_calculator(cidr))))}')
+    print(f'Number of useable host: {ip}')
+    print(f'Subnet Mask: {".".join(map(str,(sc.subnetmask_calculator(cidr))))}')
     print('Description: ' + desc)
 
