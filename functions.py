@@ -22,8 +22,14 @@ def usable_ip(num):
 
 
 def result(cidr,desc):
+    if cidr == 31:
+        ip = 2
+    elif cidr == 32:
+        ip = 1
+    else: 
+        ip = usable_ip(cidr)
     print(f'CIDR: /{cidr}')
-    print(f'Nuber of useable host: {usable_ip(cidr)}')
+    print(f'Nuber of useable host: {ip}')
     print(f'Subnetmask: {".".join(map(str,(sc.subnetmask_calculator(cidr))))}')
     print('Description: ' + desc)
 
