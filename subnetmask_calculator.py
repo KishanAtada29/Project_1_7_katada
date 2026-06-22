@@ -8,7 +8,7 @@ def subnetmask_calculator(cidr):
     else:
         octect = 0
         octet_side = cidr % f.single_octet_bits()
-        each_octet = int(cidr / 8)
+        each_octet = int(cidr / f.single_octet_bits())
         for bit in range(each_octet):
             subnetmask.append(sum(f.prefix_bits()))
         for bit in range(octet_side):

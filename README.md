@@ -14,10 +14,12 @@ A Subnetr Planner is a Python command-line program that calculates subnet masks 
 
 # Project Files
 
-- `main.py` controls the menu
-- `cidr_calculator.py` performs CIDR calculations
+- `main.py` controls the menu and progrma flow
+- `cidr_input.py` handles CIDR input and displays results
+- `cidr_desc.py` providesdescription for CIDR ranges 
 - `classful_student_info.py` displays classful subnet information
 - `functions.py` stores shared helper functions
+- `subnetmask_calculator.py` converts CIDR prefix into subnet masks
 
 # How to Run
 

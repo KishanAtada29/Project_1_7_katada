@@ -1,6 +1,6 @@
 
 import classful_subnet_info as csi
-import cidr_calculator as calculator
+import cidr_input as ci
         
 
 
@@ -29,7 +29,7 @@ while True:
     if user_choice == 1:
         csi.classful_subnet()
     elif user_choice == 2:
-        calculator.cidr_calculator()
+        ci.cidr_calculator()
         
     elif user_choice == 3:
         print('Goodbye !')

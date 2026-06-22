@@ -10,7 +10,8 @@ def number_of_octets():
 def total_bits():
     return (single_octet_bits() * number_of_octets())
 def remaing_bits(n):
-    return total_bits() - n   
+    return total_bits() - n 
+  
 def unusable_IPs():
     return 2
 def octect_value():
