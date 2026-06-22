@@ -1,4 +1,15 @@
+"""Provides short descriptions for CIDR prefix ranges."""
+
 def cidr_desc(cidr):
+    """
+    Return a short description for a CIDR prefix.
+
+    Args:
+        cidr: An integer from 0 to 32.
+
+    Returns:
+        A string describing the common use of the CIDR range.
+    """
     if cidr == 0:
         des = 'Represents all IPv4 addresses; commonly used as a default route.'
     elif 1 <= cidr <= 7:

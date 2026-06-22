@@ -1,7 +1,8 @@
+"""Runs the Subnet Planner menu and controls the program flow."""
 
 import classful_subnet_info as csi
 import cidr_input as ci
-        
+import functions as f        
 
 
 while True:
@@ -9,17 +10,15 @@ while True:
     print('Subnetmask Planner')
     print('-------------------')
     print('')
-    print('1. Claseful Subnet Info')
-    print('2. Manual CIDR Calculator')
-    print('3. Exit')
+    f.display_menu()
     print('')
     user_choice = int(input('Please Enter One of the Choice (1-3): '))
+    print('')
     while user_choice != 1 and user_choice != 2 and user_choice != 3:
-        print('Invalid option...')
-        print('1. Claseful Subnet Info')
-        print('2. Manual CIDR Calculator')
-        print('3. Exit')
         print('')
+        print('Invalid option...')
+        print('')
+        f.display_menu()
         user_choice = int(input('Please Enter One of the Choice (1-3): '))
 
     

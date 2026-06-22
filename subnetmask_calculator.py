@@ -1,7 +1,17 @@
+"""Converts a CIDR prefix into a four-octet subnet mask."""
 
 import functions as f
 
 def subnetmask_calculator(cidr):
+    """
+    Convert a CIDR prefix into a subnet mask.
+
+    Args:
+        cidr: An integer from 0 to 32.
+
+    Returns:
+        A list containing four subnet-mask octets.
+    """
     subnetmask = [] 
     if cidr == 0:
         subnetmask = [0,0,0,0]

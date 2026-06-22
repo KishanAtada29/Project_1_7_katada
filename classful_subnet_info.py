@@ -1,25 +1,51 @@
+"""Provides and displays classful IPv4 subnet information."""
+
 import functions as f
 import subnetmask_calculator as sc
 
 
 def class_A():
+    """
+    Return the host-bit and network-bit counts for Class A.
+
+    Returns:
+        A tuple containing host bits and network bits.
+    """
     network_portion = f.single_octet_bits() * 1
     host_portion = f.single_octet_bits() * 3
     return host_portion, network_portion
 def class_B():
+    """
+    Return the host-bit and network-bit counts for Class B.
+
+    Returns:
+        A tuple containing host bits and network bits.
+    """
     network_portion = f.single_octet_bits() * 2
     host_portion = f.single_octet_bits() * 2
     return host_portion, network_portion
 def class_C():
+    """
+    Return the host-bit and network-bit counts for Class C.
+
+    Returns:
+        A tuple containing host bits and network bits.
+    """
     network_portion = f.single_octet_bits() * 3
     host_portion = f.single_octet_bits() * 1
     return host_portion, network_portion
 
-# In IPv4, 1 represensts network and host represents 0
-# class_x [0] = host side
-# class_x [1] = network side  
+# In a subnet mask, 1 represensts the network portion and 0 represents the host portion
+# class_x [0] = contain host bits
+# class_x [1] = contain network bits
 
 def classful_subnet():
+    """
+    Display Class A, Class B, and Class C subnet information.
+
+    The function shows the default CIDR prefix, usable hosts,
+    and subnet mask for each class.
+    """
     a = class_A()
     b = class_B()
     c = class_C()
