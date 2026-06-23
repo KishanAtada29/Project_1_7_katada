@@ -1,4 +1,11 @@
-"""Runs the Subnet Planner menu and controls the program flow."""
+"""
+    Program Name: Subnet Planner
+    Author: Kishan Atada
+    Purpose: Provide classful subnet information and calculate subnet masks
+    from CIDR prefixes.
+    Starter Code Information: No starter code was used.
+    Date: June 23, 2026
+"""
 
 import classful_subnet_info as csi
 import cidr_input as ci

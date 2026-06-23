@@ -1,4 +1,10 @@
-"""Provides and displays classful IPv4 subnet information."""
+"""
+    Program Name: Subnet Planner
+    Author: Kishan Atada
+    Purpose: Calculate and display default Class A, Class B, and Class C subnet information.
+    Starter Code Information: No starter code was used.
+    Date: June 23, 2026
+"""
 
 import functions as f
 import subnetmask_calculator as sc

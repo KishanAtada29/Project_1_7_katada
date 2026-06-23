@@ -1,4 +1,10 @@
-"""Handles CIDR input, validates the value, and displays the result."""
+"""
+    Program Name: Subnet Planner
+    Author: Kishan Atada
+    Purpose: Collect and validate CIDR input, then display subnet information.
+    Starter Code Information: No starter code was used.
+    Date: June 23, 2026
+"""
 
 import functions as f
 import cidr_desc as cd

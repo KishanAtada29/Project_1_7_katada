@@ -1,4 +1,10 @@
-"""Contains shared helper functions for IPv4 and CIDR calculations."""
+"""
+    Program Name: Subnet Planner
+    Author: Kishan Atada
+    Purpose: Provide shared helper functions for IPv4 and CIDR calculations.
+    Starter Code Information: No starter code was used.
+    Date: June 23, 2026
+"""
 
 import subnetmask_calculator as sc
 
@@ -62,7 +68,9 @@ def get_result(cidr,desc):
     print(f'Number of useable host: {ip}')
     print(f'Subnet Mask: {".".join(map(str,(sc.subnetmask_calculator(cidr))))}')
     print('Description: ' + desc)
+
 def display_menu():
+    """Display the main menu options."""
     print('1. Claseful Subnet Info')
     print('2. Manual CIDR Calculator')
     print('3. Exit')

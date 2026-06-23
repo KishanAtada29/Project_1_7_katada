@@ -23,17 +23,12 @@ def subnetmask_calculator(cidr):
             subnetmask.append(sum(f.prefix_bits()))
         for bit in range(octet_side):
             octect = f.prefix_bits()[bit] + octect
+
+    if octet_side > 0:
         subnetmask.append(octect)
-        if len(subnetmask) == 3:
-                subnetmask.append(0)
-        elif len(subnetmask) == 2:
-            subnetmask.append(0)
-            subnetmask.append(0)
-        elif len(subnetmask) == 1:
-            subnetmask.append(0)
-            subnetmask.append(0)
-            subnetmask.append(0)
-        elif len(subnetmask) == 5:
-            subnetmask.pop()
-        
+
+    while len(subnetmask) < 4:
+        subnetmask.append(0)
+
+
     return subnetmask

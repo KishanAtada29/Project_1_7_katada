@@ -1,4 +1,11 @@
-"""Provides short descriptions for CIDR prefix ranges."""
+"""
+    Program Name: Subnet Planner
+    Author: Kishan Atada
+    Purpose: Provide classful subnet information and calculate subnet masks
+        from CIDR prefixes.
+    Starter Code Information: No starter code was used.
+    Date: June 23, 2026
+"""
 
 def cidr_desc(cidr):
     """
